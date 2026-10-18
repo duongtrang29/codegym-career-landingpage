@@ -1,0 +1,86 @@
+/* Tùy chỉnh màu nhận diện CodeGym kết hợp phong cách Material Design */
+:root {
+  --cg-orange: #f36f21;
+  --cg-blue: #003366;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  background-color: #fcfcfc;
+}
+
+/* Navbar */
+.navbar.navbar-dark .navbar-nav .nav-link {
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Hero Section */
+.hero-section {
+  background:
+    linear-gradient(135deg, rgba(0, 51, 102, 0.95), rgba(243, 111, 33, 0.85)),
+    url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1500&q=80")
+      center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 80px;
+}
+
+.hero-btn {
+  background-color: var(--cg-orange) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+
+/* Card cải tiến độ nổi (Depth / Shadow) chuẩn Material Design */
+.card-feature {
+  border: none;
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.card-feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* Section Headings */
+.section-title {
+  position: relative;
+  font-weight: 700;
+  color: var(--cg-blue);
+  margin-bottom: 15px;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: var(--cg-orange);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Testimonial avatar */
+.avatar-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border: 3px solid var(--cg-orange);
+}
